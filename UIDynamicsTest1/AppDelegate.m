@@ -7,15 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIViewController *vc = [[ViewController alloc] init];
+    window.rootViewController = vc;
+    [window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
